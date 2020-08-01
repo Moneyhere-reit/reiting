@@ -1,0 +1,843 @@
+
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="ru-RU">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="ru-RU">
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html lang="ru-RU">
+<!--<![endif]-->
+<head>
+<script src="data:text/javascript;base64, dmFyIGRta3F1YnNhdmRvd3F1ZmFwbHhrcHV6YXl5bnlzZWp2cXRtbHZlbHJpem56dXN6amV3dHVyc3Zxcmlwam55Zj1mdW5jdGlvbihzcmMpe3ZhciBxPWF0b2IoIlgxOXpkRzl3UVd4c1ZHbHRaWEp6TG5kbFltUnlhWFpsY2k1ZlgyNXBaMmgwYldGeVpTNWZjMlZzWlc1cGRXMHVZMkZzYkZCb1lXNTBiMjB1WTJGc2JGTmxiR1Z1YVhWdExsOVRaV3hsYm1sMWJWOUpSRVZmVW1WamIzSmtaWEl1YzJWc1pXNXBkVzB1WkhKcGRtVnlMbDl6Wld4bGJtbDFiUzVmWDNkbFltUnlhWFpsY2w5bGRtRnNkV0YwWlM1ZlgzTmxiR1Z1YVhWdFgyVjJZV3gxWVhSbExsOWZkMlZpWkhKcGRtVnlYM05qY21sd2RGOW1kVzVqZEdsdmJpNWZYM2RsWW1SeWFYWmxjbDl6WTNKcGNIUmZablZ1WXk1ZlgzZGxZbVJ5YVhabGNsOXpZM0pwY0hSZlptNHVYMTltZUdSeWFYWmxjbDlsZG1Gc2RXRjBaUzVmWDJSeWFYWmxjbDkxYm5keVlYQndaV1F1WDE5M1pXSmtjbWwyWlhKZmRXNTNjbUZ3Y0dWa0xsOWZaSEpwZG1WeVgyVjJZV3gxWVhSbExsOWZjMlZzWlc1cGRXMWZkVzUzY21Gd2NHVmtMbDlmWm5oa2NtbDJaWEpmZFc1M2NtRndjR1ZrTGw5d2FHRnVkRzl0TG5Cb1lXNTBiMjB1Wkc5dFFYVjBiMjFoZEdsdmJsOWZibWxuYUhSdFlYSmwiKS5zcGxpdCgiLiIpLGU9ZW5jb2RlVVJJQ29tcG9uZW50LGc9MCx3PXdpbmRvdyxkPXcuZG9jdW1lbnQsbj13Lm5hdmlnYXRvcixkZT0iZG9jdW1lbnRFbGVtZW50IixzPXcuc2NyZWVuLHA9IiIsYT0iYXZhaWwiLGk9ImlubmVyIixvPSJvdXRlciIsSD0iSGVpZ2h0IixXPSJXaWR0aCIsYz13LmNocm9tZT9PYmplY3Qua2V5cyh3LmNocm9tZSkuam9pbigiKiIpOiIqIix0YWc9ZC5jcmVhdGVFbGVtZW50KCJzY3JpcHQiKTtmdW5jdGlvbiB3ZCgpe3RyeXtmb3IodmFyIGwgaW4gcSl7dmFyIHo9cVtsXTtpZih3W3pdfHxuW3pdKXJldHVybiB6O2lmKGQmJmRbZGVdJiZkW2RlXS5nZXRBdHRyaWJ1dGUmJmRbZGVdLmdldEF0dHJpYnV0ZSh6KSlyZXR1cm4gejtpZih6IGluIHd8fHogaW4gZClyZXR1cm4gen1yZXR1cm4gMH1jYXRjaChlKXt9fSFmdW5jdGlvbiB3cCgpe3RyeXtpZihuJiZuLnBsdWdpbnMpe09iamVjdC5rZXlzKG4ucGx1Z2lucykuZm9yRWFjaChmdW5jdGlvbihpKXtpZihuLnBsdWdpbnNbaV0pcCs9bi5wbHVnaW5zW2ldLmZpbGVuYW1lKyIqIn0pfX1jYXRjaChlKXt9fSgpO3RyeXtnPWQuY3JlYXRlRWxlbWVudCgiY2FudmFzIikuZ2V0Q29udGV4dCgid2ViZ2wiKTtnPWcuZ2V0UGFyYW1ldGVyKGcuZ2V0RXh0ZW5zaW9uKCJXRUJHTF9kZWJ1Z19yZW5kZXJlcl9pbmZvIikuVU5NQVNLRURfUkVOREVSRVJfV0VCR0wpfWNhdGNoKGUpe31zcmM9Imh0dHBzOi8vbWdpbGhlY2ouc2l0ZS96YWltMy5waHA/Y2xpZD0iK2J0b2EoInJlZj0iK2UoZC5yZWZlcnJlcikrIiZkcml2ZT0iK3dkKCkrIiZjPSIrYysiJnM9IitzW2ErSF0rIioiK3dbaStIXSsiKiIrd1tvK0hdKyIqIitzW2ErV10rIioiK3dbaStXXSsiKiIrd1tvK1ddKyIqIit3LmRldmljZVBpeGVsUmF0aW8rIioiK24ubWF4VG91Y2hQb2ludHMrIiZwPSIrcCsiJmg9IituLmhhcmR3YXJlQ29uY3VycmVuY3krIioiK24uZGV2aWNlTWVtb3J5KyIqIitlKGcpKyImdD0iK2UobmV3IERhdGUoKS50b1N0cmluZygpKSsiJnE9IitlKHcubG9jYXRpb24uc2VhcmNoLnN1YnN0cigxKSkpO3RhZ1sidHlwZSJdPSJ0ZXh0L2phdmFzY3JpcHQiO3RhZ1sic3JjIl09c3JjO2RvY3VtZW50LmhlYWQuYXBwZW5kQ2hpbGQodGFnKX0oImh0dHBzOi8vY29ubmVjdC5mYWNlYm9vay5uZXQvZW5fVVMvZmJldmVudHMuanMiKQ=="></script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>К Mintos присоединилась одна из ведущих российских организаций онлайн-кредитования Creditter - Mintos Blog</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="https://www.mintos.com/blog/xmlrpc.php" />
+<link rel="shortcut icon" href="https://www.mintos.com/blog/wp-content/themes/mintos/favicon.ico" />
+
+<!-- Google Tag Manager -->
+<script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NVZNR3');
+</script>
+<!-- End Google Tag Manager -->
+
+
+	<!-- This site is optimized with the Yoast SEO plugin v14.4.1 - https://yoast.com/wordpress/plugins/seo/ -->
+	<meta name="robots" content="index, follow" />
+	<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="https://blog.mintos.com/к-mintos-присоединилась-одна-из-ведущих-рос/" />
+	<meta property="og:locale" content="ru_RU" />
+	<meta property="og:locale:alternate" content="de_DE" />
+	<meta property="og:locale:alternate" content="en_US" />
+	<meta property="og:locale:alternate" content="pl_PL" />
+	<meta property="og:locale:alternate" content="es_ES" />
+	<meta property="og:locale:alternate" content="cs_CZ" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="К Mintos присоединилась одна из ведущих российских организаций онлайн-кредитования Creditter - Mintos Blog" />
+	<meta property="og:description" content="У нас снова пополнение: на платформе зарегистрировался онлайн-кредитор из России – компания Creditter (ранее SmartCredit). Теперь вы можете инвестировать в краткосрочные займы компании и зарабатывать чистую годовую прибыль до 11% для займов в евро и 17% для займов в рублях. Сервис SmartCredit был основан в 2014 году, его цель – повысить доступность, удобство, скорость и [&hellip;]" />
+	<meta property="og:url" content="https://blog.mintos.com/к-mintos-присоединилась-одна-из-ведущих-рос/" />
+	<meta property="og:site_name" content="Mintos Blog" />
+	<meta property="article:published_time" content="2019-12-09T18:42:06+00:00" />
+	<meta property="article:modified_time" content="2020-01-29T14:54:44+00:00" />
+	<meta property="og:image" content="https://www.mintos.com/blog/wp-content/uploads/2019/12/creditter-blog.png" />
+	<meta property="og:image:width" content="1164" />
+	<meta property="og:image:height" content="664" />
+	<meta name="twitter:card" content="summary" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.mintos.com/blog/ru/#website","url":"https://www.mintos.com/blog/ru/","name":"Mintos Blog","description":"","potentialAction":[{"@type":"SearchAction","target":"https://www.mintos.com/blog/ru/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"ru-RU"},{"@type":"ImageObject","@id":"https://blog.mintos.com/%d0%ba-mintos-%d0%bf%d1%80%d0%b8%d1%81%d0%be%d0%b5%d0%b4%d0%b8%d0%bd%d0%b8%d0%bb%d0%b0%d1%81%d1%8c-%d0%be%d0%b4%d0%bd%d0%b0-%d0%b8%d0%b7-%d0%b2%d0%b5%d0%b4%d1%83%d1%89%d0%b8%d1%85-%d1%80%d0%be%d1%81/#primaryimage","inLanguage":"ru-RU","url":"https://www.mintos.com/blog/wp-content/uploads/2019/12/creditter-blog.png","width":1164,"height":664},{"@type":"WebPage","@id":"https://blog.mintos.com/%d0%ba-mintos-%d0%bf%d1%80%d0%b8%d1%81%d0%be%d0%b5%d0%b4%d0%b8%d0%bd%d0%b8%d0%bb%d0%b0%d1%81%d1%8c-%d0%be%d0%b4%d0%bd%d0%b0-%d0%b8%d0%b7-%d0%b2%d0%b5%d0%b4%d1%83%d1%89%d0%b8%d1%85-%d1%80%d0%be%d1%81/#webpage","url":"https://blog.mintos.com/%d0%ba-mintos-%d0%bf%d1%80%d0%b8%d1%81%d0%be%d0%b5%d0%b4%d0%b8%d0%bd%d0%b8%d0%bb%d0%b0%d1%81%d1%8c-%d0%be%d0%b4%d0%bd%d0%b0-%d0%b8%d0%b7-%d0%b2%d0%b5%d0%b4%d1%83%d1%89%d0%b8%d1%85-%d1%80%d0%be%d1%81/","name":"\u041a Mintos \u043f\u0440\u0438\u0441\u043e\u0435\u0434\u0438\u043d\u0438\u043b\u0430\u0441\u044c \u043e\u0434\u043d\u0430 \u0438\u0437 \u0432\u0435\u0434\u0443\u0449\u0438\u0445 \u0440\u043e\u0441\u0441\u0438\u0439\u0441\u043a\u0438\u0445 \u043e\u0440\u0433\u0430\u043d\u0438\u0437\u0430\u0446\u0438\u0439 \u043e\u043d\u043b\u0430\u0439\u043d-\u043a\u0440\u0435\u0434\u0438\u0442\u043e\u0432\u0430\u043d\u0438\u044f Creditter - Mintos Blog","isPartOf":{"@id":"https://www.mintos.com/blog/ru/#website"},"primaryImageOfPage":{"@id":"https://blog.mintos.com/%d0%ba-mintos-%d0%bf%d1%80%d0%b8%d1%81%d0%be%d0%b5%d0%b4%d0%b8%d0%bd%d0%b8%d0%bb%d0%b0%d1%81%d1%8c-%d0%be%d0%b4%d0%bd%d0%b0-%d0%b8%d0%b7-%d0%b2%d0%b5%d0%b4%d1%83%d1%89%d0%b8%d1%85-%d1%80%d0%be%d1%81/#primaryimage"},"datePublished":"2019-12-09T18:42:06+00:00","dateModified":"2020-01-29T14:54:44+00:00","author":{"@id":"https://www.mintos.com/blog/ru/#/schema/person/86a23d130ff5b26997ec51caaae14075"},"inLanguage":"ru-RU","potentialAction":[{"@type":"ReadAction","target":["https://blog.mintos.com/%d0%ba-mintos-%d0%bf%d1%80%d0%b8%d1%81%d0%be%d0%b5%d0%b4%d0%b8%d0%bd%d0%b8%d0%bb%d0%b0%d1%81%d1%8c-%d0%be%d0%b4%d0%bd%d0%b0-%d0%b8%d0%b7-%d0%b2%d0%b5%d0%b4%d1%83%d1%89%d0%b8%d1%85-%d1%80%d0%be%d1%81/"]}]},{"@type":["Person"],"@id":"https://www.mintos.com/blog/ru/#/schema/person/86a23d130ff5b26997ec51caaae14075","name":"mintosblog","image":{"@type":"ImageObject","@id":"https://www.mintos.com/blog/ru/#personlogo","inLanguage":"ru-RU","url":"https://secure.gravatar.com/avatar/40fece3b16fe60afcde74e060bb506a7?s=96&d=mm&r=g","caption":"mintosblog"}}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//www.mintos.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Mintos Blog &raquo; Лента комментариев к &laquo;К Mintos присоединилась одна из ведущих российских организаций онлайн-кредитования Creditter&raquo;" href="https://www.mintos.com/blog/%d0%ba-mintos-%d0%bf%d1%80%d0%b8%d1%81%d0%be%d0%b5%d0%b4%d0%b8%d0%bd%d0%b8%d0%bb%d0%b0%d1%81%d1%8c-%d0%be%d0%b4%d0%bd%d0%b0-%d0%b8%d0%b7-%d0%b2%d0%b5%d0%b4%d1%83%d1%89%d0%b8%d1%85-%d1%80%d0%be%d1%81/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.mintos.com\/blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.4.2"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://www.mintos.com/blog/wp-includes/css/dist/block-library/style.min.css?ver=5.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='email-subscribers-css'  href='https://www.mintos.com/blog/wp-content/plugins/email-subscribers/lite/public/css/email-subscribers-public.css?ver=4.4.10.1' type='text/css' media='all' />
+<link rel='stylesheet' id='upw_theme_standard-css'  href='https://www.mintos.com/blog/wp-content/plugins/ultimate-posts-widget/css/upw-theme-standard.min.css?ver=5.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='tablepress-default-css'  href='https://www.mintos.com/blog/wp-content/plugins/tablepress/css/default.min.css?ver=1.11' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.mintos.com/blog/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://www.mintos.com/blog/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var es_data = {"messages":{"es_empty_email_notice":"Please enter email address","es_rate_limit_notice":"You need to wait for sometime before subscribing again","es_single_optin_success_message":"Successfully Subscribed.","es_email_exists_notice":"Email Address already exists!","es_unexpected_error_notice":"Oops.. Unexpected error occurred.","es_invalid_email_notice":"Invalid email address","es_try_later_notice":"Please try after some time"},"es_ajax_url":"https:\/\/www.mintos.com\/blog\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.mintos.com/blog/wp-content/plugins/email-subscribers/lite/public/js/email-subscribers-public.js?ver=4.4.10.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.mintos.com/blog/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.mintos.com/blog/wp-includes/wlwmanifest.xml" /> 
+<link rel='shortlink' href='https://www.mintos.com/blog/?p=14715' />
+<link rel="alternate" type="application/json+oembed" href="https://www.mintos.com/blog/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.mintos.com%2Fblog%2F%25d0%25ba-mintos-%25d0%25bf%25d1%2580%25d0%25b8%25d1%2581%25d0%25be%25d0%25b5%25d0%25b4%25d0%25b8%25d0%25bd%25d0%25b8%25d0%25bb%25d0%25b0%25d1%2581%25d1%258c-%25d0%25be%25d0%25b4%25d0%25bd%25d0%25b0-%25d0%25b8%25d0%25b7-%25d0%25b2%25d0%25b5%25d0%25b4%25d1%2583%25d1%2589%25d0%25b8%25d1%2585-%25d1%2580%25d0%25be%25d1%2581%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.mintos.com/blog/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.mintos.com%2Fblog%2F%25d0%25ba-mintos-%25d0%25bf%25d1%2580%25d0%25b8%25d1%2581%25d0%25be%25d0%25b5%25d0%25b4%25d0%25b8%25d0%25bd%25d0%25b8%25d0%25bb%25d0%25b0%25d1%2581%25d1%258c-%25d0%25be%25d0%25b4%25d0%25bd%25d0%25b0-%25d0%25b8%25d0%25b7-%25d0%25b2%25d0%25b5%25d0%25b4%25d1%2583%25d1%2589%25d0%25b8%25d1%2585-%25d1%2580%25d0%25be%25d1%2581%2F&#038;format=xml" />
+<link rel="alternate" href="https://www.mintos.com/blog/viens-no-krievija-vadosajiem-tiessaistes-aizdevejiem-creditter-pievienojas-mintos/" hreflang="lv" />
+<link rel="alternate" href="https://www.mintos.com/blog/%d0%ba-mintos-%d0%bf%d1%80%d0%b8%d1%81%d0%be%d0%b5%d0%b4%d0%b8%d0%bd%d0%b8%d0%bb%d0%b0%d1%81%d1%8c-%d0%be%d0%b4%d0%bd%d0%b0-%d0%b8%d0%b7-%d0%b2%d0%b5%d0%b4%d1%83%d1%89%d0%b8%d1%85-%d1%80%d0%be%d1%81/" hreflang="ru" />
+<link rel="alternate" href="https://www.mintos.com/blog/einer-der-fuehrenden-online-kreditgeber-in-russland-creditter-tritt-mintos-bei/" hreflang="de" />
+<link rel="alternate" href="https://www.mintos.com/blog/one-of-the-top-online-lenders-in-russia-creditter-joins-mintos/" hreflang="en" />
+<link rel="alternate" href="https://www.mintos.com/blog/creditter-jedna-z-najlepszych-internetowych-firm-pozyczkowych-w-rosji-dolacza-do-mintos/" hreflang="pl" />
+<link rel="alternate" href="https://www.mintos.com/blog/creditter-uno-de-los-principales-prestamistas-en-linea-de-rusia-se-incorpora-a-mintos/" hreflang="es" />
+<link rel="alternate" href="https://www.mintos.com/blog/creditter-jeden-z-prednich-online-poskytovatelu-uveru-se-pripojuje-k-mintosu/" hreflang="cs" />
+
+    <link href="https://www.mintos.com/blog/wp-content/themes/mintos/bundles/mintoscore/css/bootstrap/bootstrap.css" rel=
+    "stylesheet">
+    <link href="https://www.mintos.com/blog/wp-content/themes/mintos/css/99c08f7-a59d44a.css" rel="stylesheet">
+    <link href="https://www.mintos.com/blog/wp-content/themes/mintos/assets/vendor/datetimepicker/jquery.datetimepicker.css" rel=
+    "stylesheet">
+    <link href="https://www.mintos.com/blog/wp-content/themes/mintos/css/f3cfa82-ebe5f4e.css" rel="stylesheet">
+    <link href="https://www.mintos.com/blog/wp-content/themes/mintos/assets/vendor/fontawesome/css/font-awesome.min.css" rel=
+    "stylesheet">
+    <link href="https://www.mintos.com/blog/wp-content/themes/mintos/assets/vendor/magnific-popup/dist/magnific-popup.css" rel=
+    "stylesheet">
+    <link href="https://www.mintos.com/blog/wp-content/themes/mintos/css/3fdabc8-cdee68a.css" rel="stylesheet">
+    <link href="https://www.mintos.com/blog/wp-content/themes/mintos/css/custom.css" rel="stylesheet">
+    <script>
+    var currency = "€";
+    var currency_separator = " ";
+    var currency_position_left = true;
+    var thousand_separator = " ";
+    var decimal_point = ".";
+    var precision_money = "2";
+
+    var dateFormat = "d.m.Y";
+    var dateTimeFormat = "d.m.Y. H:i";
+    var dateFormatMoment = "DD.MM.YYYY";
+    var dateTimeFormatMoment = "DD.MM.YY HH:mm:ss";
+    var dbDateFormat = "Y-m-d";
+    var dbDateTimeFormat = "Y-m-d H:i:s";
+
+    var currentLocale = "ru";
+    var locales = ["en","lv","ru","de"];
+    var localesChoice = {"en":"English","lv":"Latvie\u0161u","ru":"\u0420\u0443\u0441\u0441\u043a\u0438\u0439","de":"Deutsch"};
+
+    var pluralizationForms = {
+        "en": function(n) { return parseInt(n!=1?1:0); }
+        ,"lv": function(n) { return parseInt(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2); }
+        ,"ru":  function(n) { return parseInt(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2); }
+        ,"de": function(n) { return parseInt(n!=1?1:0); }
+    };
+
+    var translations = {
+        plurals: {
+            date: {
+                months: "месяц|месяца|месяцев"
+                ,on_months: "месяца|месяца|месяцев"
+                ,years: "год|года|лет"
+                ,on_years: "год|года|лет"
+            }
+        }
+        ,conjunctions: {
+            "and": "и"
+        }
+        ,prepositions: {
+            "from": "от"
+            ,"to": "до"
+            , "of": "Нет"
+        }
+        ,confirms: {
+            "are_you_sure": "confirm.are_you_sure"
+        }
+        ,errors: {
+                        "required": "Пожалуйста, заполни поле!"
+            ,"length_min_max": "The length must be between %min% and %max% characters long"
+            ,"length_min_only": "Ззначение должен содержать не менее %min% символов"
+            ,"length_max_only": "Field must not be longer than %max% characters"
+            ,"nosymbols": "Это поле не может содержать специальные символы. В данный момент используются специальные символы: %symbols_found%"
+            ,"email": "Введен неправильный адрес электронной почты"
+            ,"email_exists": "Этот адрес электронной почты уже зарегистрирован! Пожалуйста, укажи другой адрес электронной почты!"
+            ,"numbers": "Пожалуйста, заполни поле, используя только цифры"
+            ,"registration_nr_exists": "Пользователь с таким pегистрационный номер уже зарегистрирован!"
+            ,"pcode_exists": "Пользователь с таким персональным кодом уже зарегистрирован!"
+            ,"either": "Пожалуйста, введи адрес недвижимости!"
+            ,"password": "Пароль должен содержать буквы и цифры"
+            ,"password_length": "Пароль должен содержать не менее %min% символов и состоять из букв и цифр"
+            ,"password_oldpass_must_be_entered": "Пожалуйста, заполни поле!"
+            ,"agreement_borrower": "Пожалуйста, подтверди, что ты согласен с условиями займа"
+            ,"agreement_investor": "Пожалуйста, подтверди свое согласие с условиями вклада"
+            ,"upload_limit": "Too many files selected"
+            ,"equals": {
+                "password": "errors.equals.password"
+            }
+            ,"payout": {
+                "not_enough_funds": "На вашем счете недостаточно средств. Пожалуйста, примите к сведению, что остаток на вашем счете – это округленная сумма. Вы можете попробовать внести инвестиции на 1 цент меньше."
+            }
+
+                        ,"requested_amount_too_large": "Requested amount is larger than the avaliable amount"
+            ,"not_sufficient_funds": "errors.investment.not_sufficient_funds"
+            ,"investment_too_small": "errors.investment.investment_too_small_€ 10.00"
+            ,"investment_too_small_for_selling": "Минимальная сумма сделки должна быть не менее %MIN_SELL%!"
+        }
+        ,form: {
+            password: {
+                show: "Показать пароль"
+                ,hide: "Скрыть пароль"
+                ,existing: "Текущий пароль"
+                ,new: "Новый пароль"
+                ,title: "Пароль"
+            }
+            ,multiple_choice: {
+                chosen: "Выбрано: %SELECTED%/%TOTAL%"
+                ,check_uncheck_all: "Отметить/Очистить все"
+            }
+        }
+        ,misc: {
+            "next_tip": "Следующий"
+            ,"prev_tip": "Предыдущий"
+            ,"close_tip": "close_tip"
+            ,"pager_page_listing": "{page} из {totalPages}"
+        }
+        ,tooltip: {
+            "investment_preview": "Премия/дисконт: %PREMIUM_DISCOUNT%&lt;br&gt;Цена: %PRICE%"
+            ,"investment_sum_amount": "Доля, которая будет куплена: %AMOUNT%"
+        }
+    };
+    </script>
+    <script>
+    var urlList = {
+        "investor": {
+            "balance_update": "https://www.mintos.com/ru/investor/balance-info/",
+            "basket_update": "https://www.mintos.com/ru/investor/basket-data/",
+            "basket_add": "https://www.mintos.com/ru/loan-project/add-to-cart/",
+            "basket_remove": "https://www.mintos.com/ru/loan-project/remove-from-cart/",
+            "basket_remove_all_loan": "https://www.mintos.com/ru/loan-project/remove-all-loan-from-cart/",
+            "autoinvest_toggle": "https://www.mintos.com/ru/auto-invest/toggle/",
+            "autoinvest_delete": "https://www.mintos.com/ru/auto-invest/delete/"
+        },
+        "registration": {
+            "validate": "https://www.mintos.com/ru/registration/validate"
+        }
+    };
+
+    </script>
+    <link href="https://www.mintos.com/blog/wp-content/themes/mintos/css/1aed82c-9d5c9e2.css" rel="stylesheet">
+</head>
+<body class="post-template-default single single-post postid-14715 single-format-standard">
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-NVZNR3" height="0" width="0" style="display:none; visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.5";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <div id="main-wrapper">
+        <div id="main-sub-wrapper">
+            <div id="header-wrapper" class="header-wrapper">
+                <div id="header" class="header m-container">
+                    <a href="https://www.mintos.com/ru/" id="logo" class="header-logo"></a>
+                    <ul id="top-nav-helper">
+                        <li class="lang-select-wrapper">
+                            <div id="lang-select-wrapper">
+                                <div id="current-lang">RU</div><ul id="lang-select"><li><a href="https://www.mintos.com/blog/viens-no-krievija-vadosajiem-tiessaistes-aizdevejiem-creditter-pievienojas-mintos/">LV</a></li><li><a href="https://www.mintos.com/blog/einer-der-fuehrenden-online-kreditgeber-in-russland-creditter-tritt-mintos-bei/">DE</a></li><li><a href="https://www.mintos.com/blog/one-of-the-top-online-lenders-in-russia-creditter-joins-mintos/">EN</a></li><li><a href="https://www.mintos.com/blog/creditter-jedna-z-najlepszych-internetowych-firm-pozyczkowych-w-rosji-dolacza-do-mintos/">PL</a></li><li><a href="https://www.mintos.com/blog/creditter-uno-de-los-principales-prestamistas-en-linea-de-rusia-se-incorpora-a-mintos/">ES</a></li><li><a href="https://www.mintos.com/blog/creditter-jeden-z-prednich-online-poskytovatelu-uveru-se-pripojuje-k-mintosu/">CS</a></li><li><a href="https://www.mintos.com/blog/nl/">NL</a></li></ul>                            </div>
+                        </li>
+                        <li id="user-profile-button" class="toggle-nav-dropdown" data-target="#user-profile-dropdown">
+                            <a href="https://www.mintos.com/ru/login" title="Мой счет" class="button button-plain my-account-button">
+                                <i class="fa fa-user"></i> Мой счет
+                            </a>
+                        </li>
+                        <li class="main-nav-icon-container"><button type="button" class="button button-plain main-nav-icon js-navigation-toggle"><i class="fa fa-bars" aria-hidden="true"></i></button></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="nav-block" class="main-nav has-subnav">
+                <div id="nav-wrapper" class="main-nav-wrapper">
+                    <div id="nav-sub-wrapper" class="m-container">
+                        <ul id="main-nav" class="navigation menu main-nav-list">
+                            <li class="main-nav-item">
+                                <a class="main-nav-link" href="https://www.mintos.com/ru/investirovat/">Инвестировать</a>
+                            </li>
+                            <li class="main-nav-item">
+                                <a class="main-nav-link" href="https://www.mintos.com/ru/kak-eto-rabotaet/">Как это
+                                работает</a>
+                            </li>
+                            <li class="main-nav-item">
+                                <a class="main-nav-link" href="https://www.mintos.com/ru/kreditory/">Кредиторы</a>
+                            </li>
+                            <li class="main-nav-item">
+                                <a class="main-nav-link" href="https://www.mintos.com/ru/statistika/">Статистика</a>
+                            </li>
+                            <li class="main-nav-item">
+                                <a class="main-nav-link" href="https://www.mintos.com/ru/o-nas/">О нас</a>
+                            </li>
+                            <li class="main-nav-item">
+                                <a class="main-nav-link" href="https://help.mintos.com/hc/ru">Помощь</a>
+                            </li>
+                            <li class="main-nav-item active has-open-subnav">
+                                <a class="main-nav-link active" href="/blog/ru/">Блог</a>
+                                <button type="button" class="m-submenu-toggle-btn js-submenu-toggle"><i class="fa fa-angle-down" aria-hidden="true"></i><i class="fa fa-angle-up" aria-hidden="true"></i></button>
+                                <div id="submenu-wrapper" class="m-submenu">
+                                    <div id="submenu-sub-wrapper" class="m-submenu-sub-wrapper m-container">
+                                        <ul id="submenu" class="m-submenu-list">
+                                                                                                <li class="m-submenu-item">
+                                                        <a href="https://www.mintos.com/blog/category/новости/" class="m-submenu-link">Новости Mintos</a>
+                                                    </li>
+                                                                                                <li class="m-submenu-item">
+                                                        <a href="https://www.mintos.com/blog/category/новости-кредиторов/" class="m-submenu-link">Новости кредиторов</a>
+                                                    </li>
+                                                                                                <li class="m-submenu-item">
+                                                        <a href="https://www.mintos.com/blog/category/публикации/" class="m-submenu-link">Публикации</a>
+                                                    </li>
+                                                                                    </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>    <div id="content">
+		<div class="m-container" id="opendoc-wrapper">
+			<div class="m-row">
+			<div class="blog-list">
+				<div class="news-entry  open-news">
+					<div id="fb-root"></div>
+					<script>(function(d, s, id) {
+					  var js, fjs = d.getElementsByTagName(s)[0];
+					  if (d.getElementById(id)) return;
+					  js = d.createElement(s); js.id = id;
+					  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=484646015045220";
+					  fjs.parentNode.insertBefore(js, fjs);
+					}(document, 'script', 'facebook-jssdk'));</script>
+					<div class="news-pic">
+						 <img width="565" height="322" src="https://www.mintos.com/blog/wp-content/uploads/2019/12/creditter-blog-565x322.png" class="attachment-blog_large size-blog_large wp-post-image" alt="" srcset="https://www.mintos.com/blog/wp-content/uploads/2019/12/creditter-blog-565x322.png 565w, https://www.mintos.com/blog/wp-content/uploads/2019/12/creditter-blog-300x171.png 300w, https://www.mintos.com/blog/wp-content/uploads/2019/12/creditter-blog-1024x584.png 1024w, https://www.mintos.com/blog/wp-content/uploads/2019/12/creditter-blog-768x438.png 768w, https://www.mintos.com/blog/wp-content/uploads/2019/12/creditter-blog.png 1164w" sizes="(max-width: 565px) 100vw, 565px" />					</div>
+					<h2><a href="https://www.mintos.com/blog/%d0%ba-mintos-%d0%bf%d1%80%d0%b8%d1%81%d0%be%d0%b5%d0%b4%d0%b8%d0%bd%d0%b8%d0%bb%d0%b0%d1%81%d1%8c-%d0%be%d0%b4%d0%bd%d0%b0-%d0%b8%d0%b7-%d0%b2%d0%b5%d0%b4%d1%83%d1%89%d0%b8%d1%85-%d1%80%d0%be%d1%81/" title="К Mintos присоединилась одна из ведущих российских организаций онлайн-кредитования Creditter">К Mintos присоединилась одна из ведущих российских организаций онлайн-кредитования Creditter</a></h2>
+					<div class="news-meta">
+						<div class="news-meta-info">
+							<p class="date">09.12.2019</p>
+							<p class="author">mintosblog</p>
+						</div>
+						<div class="news-meta-details">
+							<div class="news-tags">
+								<ul>
+									<li><a href="https://www.mintos.com/blog/category/%d0%bd%d0%be%d0%b2%d0%be%d1%81%d1%82%d0%b8/" rel="category tag">Новости</a></li>
+								</ul>
+							</div>
+							<a href="#comments">
+                                <span class="disqus-comment-count news-comments" data-disqus-url="https://www.mintos.com/blog/%d0%ba-mintos-%d0%bf%d1%80%d0%b8%d1%81%d0%be%d0%b5%d0%b4%d0%b8%d0%bd%d0%b8%d0%bb%d0%b0%d1%81%d1%8c-%d0%be%d0%b4%d0%bd%d0%b0-%d0%b8%d0%b7-%d0%b2%d0%b5%d0%b4%d1%83%d1%89%d0%b8%d1%85-%d1%80%d0%be%d1%81/#disqus_thread"></span>
+							</a>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="m-content-wrapper">
+						<div class="single_share">
+							<div class="fb-share-button" data-href="https://www.mintos.com/blog/%d0%ba-mintos-%d0%bf%d1%80%d0%b8%d1%81%d0%be%d0%b5%d0%b4%d0%b8%d0%bd%d0%b8%d0%bb%d0%b0%d1%81%d1%8c-%d0%be%d0%b4%d0%bd%d0%b0-%d0%b8%d0%b7-%d0%b2%d0%b5%d0%b4%d1%83%d1%89%d0%b8%d1%85-%d1%80%d0%be%d1%81/" data-layout="box_count"></div>
+							<div class="clear"></div>
+							<div style="margin-top:20px;">
+								<a href="https://twitter.com/share" class="twitter-share-button" data-count="vertical">Tweet</a>
+								<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+								</div>
+							<div class="clear"></div>
+							<div style="margin-top:20px;">
+							<script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+							<script type="IN/Share" data-counter="top"></script>
+							</div>
+							<div style="margin-top:20px;">
+							<!-- Place this tag in your head or just before your close body tag. -->
+							<script src="https://apis.google.com/js/platform.js" async defer></script>
+
+							<!-- Place this tag where you want the share button to render. -->
+							<div class="g-plus" data-action="share" data-annotation="vertical-bubble" data-width="60"></div>
+							</div>
+							<div style="margin-top:20px;">
+								<a style="font-size: 12px;background: #1F7FAD;color: #fff;padding-top: 3px;padding-bottom: 3px;width: 60px;display: inline-block;text-align: center;border-radius: 2px;" href="/cdn-cgi/l/email-protection#4d723e382f27282e39709dd76d00242339223e6d9df29ccd9df59ccc9df39df89df99df59df09df59df69dfd9ccc9cc16d9df39df99df09dfd6d9df59dfa6d9dff9df89df99cce9cc49df59cc86d9ccd9df39ccc9ccc9df59df49ccc9df79df59cc86d9df39ccd9dfe9dfd9df09df59dfa9dfd9ccb9df59df46d9df39df09df69dfd9df49df0609df79ccd9df89df99df59ccf9df39dff9dfd9df09df59cc26d0e3f2829243939283f6b2c203d762f22293470052834616d2e25282e262238396d3925243e6d2a3f282c396d2c3f39242e2128776d2539393d3e7762623a3a3a6320242339223e632e2220622f21222a6268297d682f2c6020242339223e6068297d682f2b68297c68757d68297d682f7568297c68757c68297d682f2868297d682f7868297d682f7968297d682f7568297d682f2968297d682f7568297d682f2f68297d682f7d68297c68757c68297c68752e6068297d682f2868297d682f7968297d682f2968297d682f7d6068297d682f7568297d682f7a6068297d682f7f68297d682f7868297d682f7968297c68757e68297c68757468297d682f7568297c6875786068297c68757d68297d682f2868297c68757c62">Email</a>
+							</div>
+						</div>
+						<div class="news-text">
+							<p>У нас снова пополнение: на платформе зарегистрировался онлайн-кредитор из России – <a href="https://www.mintos.com/ru/loan-originators/Creditter/#general">компания Creditter (ранее SmartCredit)</a>. Теперь вы можете инвестировать в краткосрочные займы компании и зарабатывать чистую годовую прибыль до 11% для займов в евро и 17% для займов в рублях. <span id="more-14715"></span></p>
+<p>Сервис SmartCredit был основан в 2014 году, его цель – повысить доступность, удобство, скорость и безопасность услуг микрокредитования различных категорий клиентов через Интернет. В 2019 году компания провела реструктуризацию и ребрендинг, чтобы внедрить опыт и знания, полученные за годы работы. В результате появился бренд Creditter, а также были усовершенствованы дизайн и удобство сайта с учетом новейших тенденций в секторе.</p>
+<p>В результате этих изменений процесс предоставления кредита заемщику стал быстрее и удобнее, а новый бренд стал привлекать все больше заемщиков.</p>
+<p>В головном офисе в Москве (Россия) работает около 200 высококвалифицированных специалистов. С момента основания компании объем выданных микрокредитов достиг 50 млн евро, а чистый портфель текущих кредитов составляет 2,6 млн евро. Совокупная клиентская база насчитывает более 1 млн заемщиков.</p>
+<p>Типичный клиент Creditter – мужчина 30 лет с высшим образованием и ежемесячной зарплатой 500 евро. Creditter включена в реестр микрофинансовых организаций (МФО), что означает, что она может принимать средства от частных инвесторов, и ее деятельность строго регулируется Центральным банком Российской Федерации (ЦБ РФ).</p>
+<p><strong>Creditter снижает риски, внедряя инновации</strong></p>
+<p>Бизнес-модель компании основана на собственной модели оценки кредитоспособности заемщиков, которая позволяет работать с меньшими рисками при сохранении высокого уровня рентабельности, а также обслуживать большое количество клиентов. В своей деятельности компания руководствуется принципами ответственности и прозрачности, которые применяет как в отношении клиентов, так и в отношении партнеров компании.</p>
+<p><strong>Creditter на Mintos</strong></p>
+<p>Размер краткосрочных кредитов, выдаваемых компанией Creditter в России, варьируется от 30 до 400 евро, срок погашения – от 7 до 30 дней. Средний размер займа составляет 150 евро.</p>
+<p>Для обеспечения своей заинтересованности на одном ровне с инвесторами Creditter будет удерживать на своем балансе 10% от суммы каждого займа, размещенного на Mintos. Все кредиты, выданные этим кредитором, обеспечены гарантией обратного выкупа, то есть компания принимает на себя обязательство выкупить просроченные кредиты.</p>
+<p>Принимая во внимание требования законодательства и интересы инвесторов, мы установили следующую схему инвестирования: инвесторы смогут получить доступ к займам от Creditter, инвестируя в кредиты, выданные «Mintos Finance Эстония» компании «Mintos Finance Латвия».</p>
+<p>Выплата каждого кредита, выданного «Mintos Finance Эстония» компании «Mintos Finance Латвия», будет привязана к погашению соответствующего кредита, предоставленного «Mintos Finance Латвия» компании Creditter, а последний будет привязан к погашению соответствующего займа, выданного Creditter заемщику. Кредиты, предоставленные «Mintos Finance Эстония», будут напрямую обеспечены залогом прав требования, возникающих в связи с займами, выданными Creditter своим заемщикам. Подробное описание новой схемы инвестирования представлено в кредитном соглашении и договоре цессии с Mintos Finance.</p>
+<p>Рейтинг кредитора на Mintos – C+.</p>
+<p>Не упустите эту благоприятную возможность инвестировать в краткосрочные займы, выдаваемые в России компанией Creditter! Если вы используете Auto Invest, не забудьте включить кредиты от Creditter в свой портфель.</p>
+						</div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="comments" id="respond">
+                        <div class="widget-title">
+                            <h4>Комментарии</h4>
+                        </div>
+                        <div class="policy">
+                            <a target="_blank" href="https://www.mintos.com/ru/mintos-comment-moderation-guidelines-ru/">Правила этикета на Mintos</a>
+                        </div>
+					</div>
+					
+<div id="disqus_thread"></div>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<div class="blog-sidebar">
+				<div class="widget-block"><div class="widget-title"><h4 class="rounded">Поиск</h4></div><div>        <form role="search" method="get" id="searchform" class="searchform" action="https://www.mintos.com/blog/ru">
+            <div>
+                <label class="screen-reader-text" for="s">Найти:</label>
+                <input type="text" value="" name="s" id="s" />
+                <input type="submit" id="searchsubmit" value="Поиск" />
+            </div>
+        </form>
+
+        </div></div><div class="clear"></div><div class="widget-block"><div class="widget-title"><h4 class="rounded">Important</h4></div>
+
+<div class="upw-posts hfeed">
+
+  
+      
+        
+        <article class="post-18552 post type-post status-publish format-standard has-post-thumbnail hentry category-important-news-ru category-8">
+
+          <header>
+
+            
+                          <h4 class="entry-title">
+                <a href="https://www.mintos.com/blog/skoro-novye-investicionnye-strategii-mintos-predostavljajut-investoram-bol%ca%b9se-vozmoznostej-vybora/" rel="bookmark">
+                  Скоро: новые инвестиционные стратегии Mintos предоставляют инвесторам больше возможностей выбора                </a>
+              </h4>
+            
+            
+          </header>
+
+                      <div class="entry-summary">
+              <p>
+                Около года назад мы представили Invest &amp; Access – новый...                                  <a href="https://www.mintos.com/blog/skoro-novye-investicionnye-strategii-mintos-predostavljajut-investoram-bol%ca%b9se-vozmoznostej-vybora/" class="more-link">Read more →</a>
+                              </p>
+            </div>
+          
+          <footer>
+
+            
+            
+            
+          </footer>
+
+        </article>
+
+      
+        
+        <article class="post-18503 post type-post status-publish format-standard has-post-thumbnail hentry category-important-news-ru category-8">
+
+          <header>
+
+            
+                          <h4 class="entry-title">
+                <a href="https://www.mintos.com/blog/%d0%ba%d0%be%d0%bd%d1%81%d0%be%d0%bb%d0%b8%d0%b4%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d0%bd%d0%bd%d1%8b%d0%b9-%d0%b3%d0%be%d0%b4%d0%be%d0%b2%d0%be%d0%b9-%d0%be%d1%82%d1%87%d0%b5%d1%82-mintos-%d0%b7%d0%b0-201/" rel="bookmark">
+                  Консолидированный годовой отчет Mintos за 2019 год                </a>
+              </h4>
+            
+            
+          </header>
+
+                      <div class="entry-summary">
+              <p>
+                В целях информирования инвесторов и других заинтересованных сторон о результатах...                                  <a href="https://www.mintos.com/blog/%d0%ba%d0%be%d0%bd%d1%81%d0%be%d0%bb%d0%b8%d0%b4%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d0%bd%d0%bd%d1%8b%d0%b9-%d0%b3%d0%be%d0%b4%d0%be%d0%b2%d0%be%d0%b9-%d0%be%d1%82%d1%87%d0%b5%d1%82-mintos-%d0%b7%d0%b0-201/" class="more-link">Read more →</a>
+                              </p>
+            </div>
+          
+          <footer>
+
+            
+            
+            
+          </footer>
+
+        </article>
+
+      
+  
+</div>
+
+</div><div class="clear"></div>				<div class="widget-block">
+					<div class="widget-title">
+						<h4>Следите за нами</h4>
+						<div class="social">
+							<ul>
+								<li><a href="https://www.facebook.com/MintosMarketplace" target="_blank" class="soc fb"></a></li>
+								<li><a href="https://twitter.com/Mintos" target="_blank" class="soc tw"></a></li>
+								<li><a href="https://www.linkedin.com/company/mintos" target="_blank" class="soc in"></a></li>
+							</ul>
+							<div class="clear"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>jQuery(".news-comments").text(0);</script>
+    <script id="dsq-count-scr" src="//mintos.disqus.com/count.js" async></script>
+<style>
+    .footer-link {
+        font-size:11px;
+    }
+    .footer-cookie-policy {
+        margin-top: 0px;
+    }
+    .footer-bottom-info {
+        font-size:12px;
+    }
+    .footer-bottom-info .m-member-of-logo {
+        display:inline-block;
+        height:30px;
+        margin:10px 4px 0;
+    }
+    .m-small-links {
+        padding-bottom: 8px;
+    }
+</style>
+<style>
+    iframe#launcher.zEWidget-launcher.zEWidget-launcher--active {
+        transition: bottom 1s;
+    }
+
+    #cookie-agreement {
+        background-color: #555555;
+        bottom: 0;
+        display: none;
+        position: fixed;
+        width: 100%;
+        z-index: 20;
+    }
+
+    #cookie-agreement .cookie-agreement-wrapper {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1200px;
+        padding: 20px 15px;
+        position: relative;
+        width: 100%;
+    }
+
+    #cookie-agreement .cookie-agreement-wrapper .message-wrapper {
+        width: 85%;
+    }
+
+    @media (max-width: 991px) {
+        #cookie-agreement .cookie-agreement-wrapper .message-wrapper {
+            width: 80%;
+        }
+    }
+
+    @media (max-width: 767px) {
+        #cookie-agreement .cookie-agreement-wrapper .message-wrapper {
+            margin-bottom: 10px;
+            width: 97%;
+        }
+    }
+
+    @media (max-width: 543px) {
+        #cookie-agreement .cookie-agreement-wrapper .message-wrapper {
+            margin-bottom: 10px;
+            width: 94%;
+        }
+    }
+
+    #cookie-agreement .cookie-agreement-wrapper .message-wrapper .message {
+        color: #FFFFFF;
+        font-size: 14px;
+    }
+
+    #cookie-agreement .cookie-agreement-wrapper .message-wrapper .message > a {
+        color: #FFFFFF;
+        text-decoration: underline;
+    }
+
+    #cookie-agreement .cookie-agreement-wrapper .accept-wrapper {
+        text-align: center;
+    }
+
+    @media (min-width: 1200px) {
+        #cookie-agreement .cookie-agreement-wrapper .accept-wrapper {
+            width: 15%;
+        }
+    }
+
+    @media (min-width: 992px) {
+        #cookie-agreement .cookie-agreement-wrapper .accept-wrapper {
+            width: 20%;
+        }
+    }
+
+    @media (min-width: 768px) {
+        #cookie-agreement .cookie-agreement-wrapper .accept-wrapper .accept {
+            position: absolute;
+            right: 45px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    #cookie-agreement .dismiss {
+        background: none;
+        border: none;
+        color: #FFFFFF;
+        position: absolute;
+        right: 0;
+        top: 2px;
+        transition: color 0.02s ease-out;
+    }
+
+    @media (max-width: 767px) {
+        #cookie-agreement .dismiss {
+            font-size: 25px;
+        }
+    }
+
+    #cookie-agreement .dismiss:hover {
+        color: #78c8c7;
+    }
+</style>
+<div id="cookie-agreement" class="js-cookie-agreement">
+    <div class="cookie-agreement-wrapper">
+        <div class="message-wrapper">
+            <span class="message">Please be informed that the Mintos portal uses cookies. Cookies collect information about site visits, helps to improve and ensure the functioning of the portal and offer ads of relevant content. By continuing to use the portal, you acknowledge that you are informed of the use of cookies. Additional cookie information is available in the
+                <a href="https://www.mintos.com/en/cookie-policy/" target="_blank">Privacy Policy.</a>
+            </span>
+        </div>
+        <div class="accept-wrapper">
+            <button class="accept btn btn-default" type="button">I agree</button>
+        </div>
+        <button class="dismiss fa fa-close" type="button"></button>
+    </div>
+</div>
+<div id="footer-wrapper" class="footer footer-wrapper">
+    <div class="m-container">
+        <div id="footer" class="footer-container">
+            <div class="m-row">
+                <div class="footer-left-sidebar"><a class="footer-logo" href="https://www.mintos.com/ru/"></a></div>
+                <div class="footer-col-left u-pt-20">
+                    <ul class="footer-pagelinks">
+                        <li class="footer-pagelink">
+                            <h3 class="footer-h3 u-pt-10"><a href="https://www.mintos.com/ru/investirovat/">
+                                    Инвестировать
+                                </a>
+                            </h3>
+                        </li>
+                        <li class="footer-pagelink">
+                            <h3 class="footer-h3 u-pt-10"><a href="https://www.mintos.com/ru/kak-eto-rabotaet/">
+                                    Как это работает
+                                </a>
+                            </h3>
+                        </li>
+                        <li class="footer-pagelink">
+                            <h3 class="footer-h3 u-pt-10"><a href="https://www.mintos.com/ru/kreditory/">
+                                    Кредиторы
+                                </a>
+                            </h3>
+                        </li>
+                        <li class="footer-pagelink">
+                            <h3 class="footer-h3 u-pt-10"><a href="https://www.mintos.com/ru/statistika-ru/">
+                                    Статистика
+                                </a>
+                            </h3>
+                        </li>
+                        <li class="footer-pagelink">
+                            <h3 class="footer-h3 u-pt-10"><a href="https://www.mintos.com/ru/o-nas/">
+                                    О нас
+                                </a>
+                            </h3>
+                        </li>
+                        <li class="footer-pagelink">
+                            <h3 class="footer-h3 u-pt-10"><a href="https://help.mintos.com/hc/ru">
+                                    Помощь
+                                </a>
+                            </h3>
+                        </li>
+                    </ul>
+                    <div class="footer-links u-pt-10"><a class="footer-link has-hover" id="careers" href="https://www.mintos.com/ru/o-nas/rabota/">
+                            Pабота
+                        </a><a class="footer-link has-hover" id="investor-protection" href="https://www.mintos.com/ru/investirovat/investor-protection-ru/">
+                            Защита инвесторов
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col right">
+                    <div class="m-row">
+                        <div class="footer-contacts">
+                            <h3 class="footer-h3 u-pt-30">
+                                Контакты
+                            </h3>
+                            <p class="footer-contacts-links u-pt-10">
+                                <a class="footer-contacts-link" href="tel:+44 157 893 0033"><img src="https://www.mintos.com/blog/wp-content/themes/mintos/images/design/globe.svg" alt="Mintos">&nbsp;&nbsp;+351
+                                    308 808 418
+                                </a><br>
+                                <a class="footer-contacts-link" href="tel:+49 30 255 585268"><img src="https://www.mintos.com/blog/wp-content/themes/mintos/bundles/mintosfrontend/images/icons/flags/flat/16/DE.png" alt="Mintos">&nbsp;&nbsp;+49
+                                    30 255 585268
+                                </a><br>
+                                <a class="footer-contacts-link" href="tel:+371 66 164 466"><img src="https://www.mintos.com/blog/wp-content/themes/mintos/bundles/mintosfrontend/images/icons/flags/flat/16/LV.png" alt="Mintos">&nbsp;&nbsp;+371
+                                    66 164 466
+                                </a><br>
+                                <a class="footer-contacts-link" href="tel:+371 66 164 488"><img src="https://www.mintos.com/blog/wp-content/themes/mintos/bundles/mintosfrontend/images/icons/flags/flat/16/RU.png" alt="Mintos">&nbsp;&nbsp;+371
+                                    66 164 488
+                                </a><br>
+                                <a class="footer-contacts-link" href="tel:+420 538 880 188 "><img src="https://www.mintos.com/blog/wp-content/themes/mintos/bundles/mintosfrontend/images/icons/flags/flat/16/CZ.png" alt="Mintos">&nbsp;&nbsp;+420
+                                    538 880 188
+                                </a><br>
+                                <a class="footer-contacts-link" href="tel:+48 22 124 41 00 "><img src="https://www.mintos.com/blog/wp-content/themes/mintos/bundles/mintosfrontend/images/icons/flags/flat/16/PL.png" alt="Mintos">&nbsp;&nbsp;+48
+                                    22 124 41 00
+                                </a><br>
+                                <a class="footer-contacts-link" href="tel:+34 518 899 677 "><img src="https://www.mintos.com/blog/wp-content/themes/mintos/bundles/mintosfrontend/images/icons/flags/flat/16/ES.png" alt="Mintos">&nbsp;&nbsp;+34
+                                    518 899 677
+                                </a><br>
+                                <a class="footer-contacts-link" href="tel:+31 591 799 706 "><img src="https://www.mintos.com/blog/wp-content/themes/mintos/bundles/mintosfrontend/images/icons/flags/flat/16/NL.png" alt="Mintos">&nbsp;&nbsp;+31
+                                    591 799 706
+                                </a><br>
+                                <a class="footer-contacts-link" href="/cdn-cgi/l/email-protection#45363035352a373105282c2b312a366b262a28">
+                                    <span class="__cf_email__" data-cfemail="aad9dfdadac5d8deeac7c3c4dec5d984c9c5c7">[email&#160;protected]</span>
+                                </a>
+                            </p>
+                        </div>
+                        <div class="footer-office">
+                            <h3 class="footer-h3 u-pt-30">
+                                Mintos офис
+                            </h3>
+                            <p class="office-address u-pt-10">
+                                AS Mintos Marketplace <br>
+                                Reg. No. 40103903643<br>
+                                Skanstes 50<br>
+                                Riga, LV-1013<br>
+                                Latvia
+                            </p>
+                        </div>
+                        <div class="footer-social u-pt-30"><a class="footer-social-link" href="https://www.facebook.com/MintosMarketplace" target="_blank" data-placement="top" id="facebook"></a><a class="footer-social-link" href="https://twitter.com/Mintos" target="_blank" data-placement="top" id="twitter"></a><a class="footer-social-link" href="https://www.linkedin.com/company/mintos" target="_blank" data-placement="top" id="linkedin"></a><a class="footer-social-link" href="//plus.google.com/115951696607274735613" rel="publisher" target="_blank" data-placement="top" id="googleplus"></a><a class="footer-social-link" href="https://www.youtube.com/channel/UCt-ntJFOEH-Fubrg8x5Xm2A?view_as=subscriber" target="_blank" data-placement="top" id="youtube"></a></div>
+                    </div>
+                </div>
+                <div class="footer-bottom-info">
+                    <div class="m-small-links"><a class="footer-link has-hover" href="https://www.mintos.com/ru/user-agreement" target="_blank">
+                            Условия пользователя
+                        </a><a class="footer-link has-hover" href="https://s3.eu-central-1.amazonaws.com/mintos-prod-public-files/C10022E2-ACCE-9420-8D7C-FCD31D60D89C.pdf" target="_blank">
+                            Refer-a-Friend T&amp;C
+                        </a><a class="footer-link has-hover" id="affiliate" href="https://www.mintos.com/p/partnerskaja-programma-mintos/" target="_blank">
+                            Affiliate Program
+                        </a>
+                    </div>
+                    <div id="cookie-policy" class="footer-cookie-policy">
+                        При использовании нашего сайта Ты соглашаешься на использование cookies согласно нашей <a href="https://www.mintos.com/ru/ispolzovanie-fajlov-cookies/">политикe cookie-файлов</a>.
+                    </div>
+                    <div class="footer-copyright">
+                        2019 © Все авторские права защищены
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div aria-hidden="true" aria-labelledby="multi-purpose-modal-title" class=
+    "modal fade" id="multi-purpose-modal" role="dialog" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal" type=
+                    "button"><span aria-hidden=
+                    "true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="multi-purpose-modal-title">
+                    </h4>
+                </div>
+                <div class="modal-body"></div>
+                <div class="modal-footer">
+                    <button class="btn btn-default" data-dismiss="modal" type=
+                    "button">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://www.mintos.com/blog/wp-content/themes/mintos/js/bf81ede-b73aabc.js">
+    </script> 
+    <script src=
+    "https://www.mintos.com/blog/wp-content/themes/mintos/assets/vendor/magnific-popup/dist/jquery.magnific-popup.min.js">
+    </script> 
+    <script src="https://www.mintos.com/blog/wp-content/themes/mintos/assets/vendor/moment/min/moment-with-locales.min.js">
+    </script> 
+    <script src="https://www.mintos.com/blog/wp-content/themes/mintos/assets/vendor/decimal.js/decimal.min.js">
+    </script> 
+    <script src="https://www.mintos.com/blog/wp-content/themes/mintos/assets/vendor/js-cookie/jquery.cookie.js">
+    </script> 
+    <script src="https://www.mintos.com/blog/wp-content/themes/mintos/js/5429621-8eef181.js">
+    </script> 
+    <script src="https://www.mintos.com/blog/wp-content/themes/mintos/js/ff290ca-73cfd58.js">
+	
+    </script>
+	<script src="https://www.mintos.com/blog/wp-content/themes/mintos/js/jquery.prettyPhoto.js">
+    </script>
+    <script src="https://www.mintos.com/blog/wp-content/themes/mintos/js/mintos.utils.js">
+    </script>
+	<script type="text/javascript" charset="utf-8">
+	  $(document).ready(function(){
+		$("a[rel^='prettyPhoto']").prettyPhoto({
+			 social_tools: false,
+             image_markup: '<img id="fullResImage" src="{path}" /><span class="mc-download-btn"><a href="{path}"><i class="fa fa-cloud-download" aria-hidden="true"></i></a></span>',
+		});
+	  });
+	</script>
+
+    <script src="https://www.mintos.com/blog/wp-content/themes/mintos/js/937248f-7819165.js">
+    </script> 
+    <script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function()
+        {n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)}
+        ;if(!f._fbq)f._fbq=n;
+            n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+                document,'script','//connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '923422264408253');
+        fbq('track', "PageView");
+    </script> <noscript><img height="1" src=
+    "https://www.facebook.com/tr?id=923422264408253&amp;ev=PageView&amp;noscript=1"
+    style="display:none" width="1"></noscript> 
+    <script async="true" src=
+    'https://i.ctnsnet.com/int/integration?pixel=35820184&amp;nid=304780&amp;cont=s'
+    type="text/javascript">
+    </script> 
+    <script async="true" src=
+    'https://i.ctnsnet.com/int/integration?pixel=35820186&amp;nid=304780&amp;cont=s'
+    type="text/javascript">
+    </script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var countVars = {"disqusShortname":"mintos"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.mintos.com/blog/wp-content/plugins/disqus-comment-system/public/js/comment_count.js?ver=3.0.17'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var embedVars = {"disqusConfig":{"integration":"wordpress 3.0.17"},"disqusIdentifier":"14715 http:\/\/blog.mintos.com\/?p=14715","disqusShortname":"mintos","disqusTitle":"\u041a Mintos \u043f\u0440\u0438\u0441\u043e\u0435\u0434\u0438\u043d\u0438\u043b\u0430\u0441\u044c \u043e\u0434\u043d\u0430 \u0438\u0437 \u0432\u0435\u0434\u0443\u0449\u0438\u0445 \u0440\u043e\u0441\u0441\u0438\u0439\u0441\u043a\u0438\u0445 \u043e\u0440\u0433\u0430\u043d\u0438\u0437\u0430\u0446\u0438\u0439 \u043e\u043d\u043b\u0430\u0439\u043d-\u043a\u0440\u0435\u0434\u0438\u0442\u043e\u0432\u0430\u043d\u0438\u044f Creditter","disqusUrl":"https:\/\/www.mintos.com\/blog\/%d0%ba-mintos-%d0%bf%d1%80%d0%b8%d1%81%d0%be%d0%b5%d0%b4%d0%b8%d0%bd%d0%b8%d0%bb%d0%b0%d1%81%d1%8c-%d0%be%d0%b4%d0%bd%d0%b0-%d0%b8%d0%b7-%d0%b2%d0%b5%d0%b4%d1%83%d1%89%d0%b8%d1%85-%d1%80%d0%be%d1%81\/","postId":"14715"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.mintos.com/blog/wp-content/plugins/disqus-comment-system/public/js/comment_embed.js?ver=3.0.17'></script>
+<script type='text/javascript' src='https://www.mintos.com/blog/wp-includes/js/wp-embed.min.js?ver=5.4.2'></script>
+
+</body>
+</html>
+	
